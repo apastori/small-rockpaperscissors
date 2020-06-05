@@ -1,0 +1,262 @@
+/* CSS styling for Rock, Paper, Scissors Game */
+
+/* Google Font Asap */
+@import url("https://fonts.googleapis.com/css?family=Asap:400,700");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292C34;
+}
+
+header {
+    background-color: white;
+    height: 100px;
+}
+
+header > h1 {
+    /*color: #25272e;*/
+    color: #292C34;
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+}
+
+#score-board {
+    border: white 4px solid;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+#score-board > span {
+    color: white;
+    font-size: 50px;
+    font-family: 'Asap', sans-serif;
+}
+
+#user-label, #computer-label {
+   color: white;
+   background-color: #E2584D;
+   font-size: 14px;
+   font-family: 'Asap', sans-serif;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   padding-right: 10px;
+   padding-left: 10px;
+}
+
+#user-label {
+    position: absolute;
+    top: 30px;
+    left: -25px;
+}
+
+#computer-label {
+    position: absolute;
+    top: 30px;
+    right: -35px;
+}
+
+#result > p {
+    font-size: 40px;
+    color: white;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.choices {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.choices > .choice {
+    display: inline-block;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+.choices > .choice:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#rock > img {
+  transform:          rotate(90deg); /* Firefox 16+, IE 10+, and other W3C compliant browsers */
+  -ms-transform:      rotate(90deg); /* IE 9 */
+  -moz-transform:     rotate(90deg); /* FF */
+  -webkit-transform:  rotate(90deg); /* Chrome, Safari 3.1+ and other webkit browsers */
+  -o-transform:       rotate(90deg); /* Opera */
+}
+
+#paper > img {
+  transform:          rotate(90deg) scaleX(-1);/* Firefox 16+, IE 10+, and other W3C compliant browsers */
+  -ms-transform:      rotate(90deg) scaleX(-1); /* IE 9 */
+  -moz-transform:     rotate(90deg) scaleX(-1); /* FF */
+  -webkit-transform:  rotate(90deg) scaleX(-1); /* Chrome, Safari 3.1+ and other webkit browsers */
+  -o-transform:       rotate(90deg) scaleX(-1); /* Opera */
+  margin-left: 10px;
+  /* How to flig an image */
+  /*-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";*/
+}
+
+#action-message {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+}
+
+/* Modal Box Style */
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: 50%;
+	z-index: 2000;
+    background-color: white;
+    visibility: hidden;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-content > h3 {
+    text-align: center;
+    /*margin-top: 20px;*/
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+	padding: 0.4em;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+
+.md-content > #message-to-user {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.md-content > #message-to-user > button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-top: 1px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+    padding-left: 7px;
+    display: block;
+    width: 30%;
+    height: 8%;
+    border-radius: 8px;
+    border: 4px solid red;
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.md-content > #message-to-user > button:hover {
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.md-content > #message-to-user > button:focus {
+    outline: 0;
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: visible;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	transition: all 0.3s;
+}
+
+.md-show > .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .md-modal {
+        /*min-width: 300px;*/
+    }
+
+    .choices {
+        margin-bottom: 25px;
+    }
+
+    .choice > img {
+          height: 80px;
+          width: 80px;
+    }
+
+    .md-content > #message-to-user > button {
+        background-color: red;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding: 0px;
+        font-size: 11px;
+    }
+
+    #message-to-user > img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+}
+
+
+
+
+
+
+

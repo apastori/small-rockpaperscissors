@@ -1,0 +1,88 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        
+        <!-- Responsive Web Design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Rock, Paper and Scissors Game</title>
+
+        <!-- Description Tag-->
+        <meta name="description" content="Simple Rock Paper Scissors Game">\
+
+        <!-- Keywords Tag -->
+        <meta name="keywords" content="Rock, Paper, Scissors, PHP, SQL">
+
+        <!-- Author Tag -->
+        <meta name="author" content="The Teleporter">
+
+        <!-- Google CDN for JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Google Fonts link -->
+        <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+
+        <!-- CSS for the Rock, paper and Scissors Game -->
+        <link rel="stylesheet" type="text/css" href="style/rockpaperscissors-style.css">
+    </head>
+    
+    <body>
+
+        <!-- Header Section-->
+        <header>
+            <h1>Rock, Paper, Scissors</h1>
+        </header>
+
+
+        <!-- Score Board-->
+        <div id="score-board">
+            <div id="user-label" class="badge">user</div>
+            <div id="computer-label" class="badge">computer</div>
+            <span id="user-score">0</span><span>:</span><span id="computer-score">0</span>
+        </div>
+
+        <!-- Result 
+        <div id="result">
+            <p>Paper covers Rock you win</p>
+        </div> -->
+
+        <!-- Modal Box Action-->
+        <div class="md-modal md-effect-1" id="modal-1">
+                <div class="md-content">
+                    <h3 id="modal-box-title">The winner is ....</h3>
+                    <div id="message-to-user">
+                        <img id="image-result" src="images/paper.png" width="200" height="200">
+                        <button id="closing-button" class="md-close">Close to play again!</button>
+                    </div> <!-- closing message-to-user div-->
+                </div> <!-- closing md-content div-->
+        </div> <!-- closing modal box-->
+
+        <!-- Different Choices-->
+        <div class="choices">
+
+            <!-- Rock choice-->
+            <div class="choice" id="rock">
+                  <img src="images/rock.png" width="150" height="150">  <!--  element for the rock choice -->
+            </div>
+
+            <!-- Paper choice -->
+            <div class="choice" id="paper">
+                   <img src="images/paper.png" width="150" height="150">  <!-- element for the paper choice -->          
+            </div>
+
+            <!-- Scissors Choice -->
+            <div class="choice" id="scissors">
+                <img src="images/scissors.png" width="150" height="150"> <!-- element for the scissor choice -->
+            </div>
+
+        </div> <!-- closing choices div -->
+
+        <!-- Action Message -->
+        <p id="action-message">Make your Move.</p>
+
+        <script type="text/javascript" src="clientSideScripting/rockpaperscissors-javascript.js" charset="utf-8"></script>
+
+    </body>
+</html>
